@@ -17,7 +17,7 @@
 
   <body>
     <nav class="navbar bg-info">
-      <a class="navbar-brand text-light p-3" href="/">Note Taker </a>
+      <a class="navbar-brand text-light p-3" href="/">Note Taker</a>
       <div class="icons">
         <i class="fas fa-save text-light save-note"></i>
         <i class="fas fa-plus text-light new-note"></i>
@@ -27,7 +27,13 @@
       <div class="row">
         <div class="col-4 list-container">
           <div class="card">
-            <ul class="list-group"></ul>
+            <!-- <ul class="list-group"></ul> -->
+            <h3>List of notes</h3>
+            <ul class="list-group"> 
+              <li>note 1</li>
+              <li>note 2</li>
+              <li>note 3</li>
+            </ul>
           </div>
         </div>
         <div class="col-8">
@@ -37,7 +43,9 @@
             maxlength="28"
             type="text"
           />
-          <textarea class="note-textarea" placeholder="Note Text"></textarea>
+          <!-- <textarea class="note-textarea" placeholder="Notes Text"></textarea> -->
+          
+          <textarea class="note-textarea" placeholder="Notes Text">Note Text Goes Here</textarea>
         </div>
       </div>
     </div>
