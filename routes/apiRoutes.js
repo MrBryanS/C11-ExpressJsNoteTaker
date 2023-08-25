@@ -2,7 +2,6 @@ const router = require('express').Router();
 const store = require('../db/store');
 
 
-
 // app.use(express.static('public'));
 
 // const noteData = require('../db/db.json');
@@ -10,11 +9,18 @@ const store = require('../db/store');
 // console.log(noteData);
 
 // [x] GET /api/notesshould read the db.jsonfile and return all saved notes as JSON.//send the json file to the browser
+//save the note the;n get and render note.
+//something in the model or 
+
 router.get('/notes', (req, res) => {
+  console.log('get notes');
+  //return res.json("Hello James");
     store.getNotes().then((notes) => {
+      console.log('notes is', notes);
         return res.json(notes);
     }).catch((err) => res.status(500).json(err));
 });
+
 
 
 // [x] GET *should return the index.htmlfile.

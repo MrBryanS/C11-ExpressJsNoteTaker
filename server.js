@@ -8,13 +8,8 @@ const htmlRoutes = require('./routes/htmlRoutes');
 // const store = require('./db/store');
 // const notes = require('./db/db.json');
 
-
-
-
 //call this varble to access Express.js methods
 const app = express();
-
-
 //call this variable to access the port
 const PORT = process.env.port || 3001;
 
@@ -30,4 +25,4 @@ app.use(`/`, htmlRoutes);
 
 app.listen(PORT, () =>
     console.log(`Example app listening at http://localhost:${PORT}`)
-    );
+);

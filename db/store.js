@@ -6,24 +6,24 @@ const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 class Store {
-    read() {
+    async read() {
         return readFileAsync('db/db.json', 'utf8');
     }
-    write(note) {
+    async write(note) {
         return writeFileAsync('db/db.json', JSON.stringify(note));
     }
     async getNotes() {
-        const notes = await this.read();
-        let parsedNotes = JSON.parse(notes);
         try {
-            parsedNotes = [].concat(JSON.parse(notes));
-
+            const notes = await this.read();
+            let parsedNotes = JSON.parse(notes);
+            console.log('parsedNotes is', parsedNotes);
+            return parsedNotes;
         } catch (error) {
             parsedNotes = [];
-
-        }
-        
+            return parsedNotes;
+        } 
     }
+// check here: 
     async addNote(note) {
         const { title, text } = note;
         if (!title || !text) {

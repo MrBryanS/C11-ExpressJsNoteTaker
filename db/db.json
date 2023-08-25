@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "title": "My first Note title",
+        "text": "HEre is some body text"
+    }
+]
