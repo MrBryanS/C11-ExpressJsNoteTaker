@@ -11,7 +11,7 @@ const htmlRoutes = require('./routes/htmlRoutes');
 //call this varble to access Express.js methods
 const app = express();
 //call this variable to access the port
-const PORT = process.env.port || 3001;
+const PORT = process.env.port || 5000;
 
 //setting up the middleware functionality
 app.use(express.json());
