@@ -16,7 +16,6 @@ class Store {
         try {
             const notes = await this.read();
             let parsedNotes = JSON.parse(notes);
-            console.log('parsedNotes is', parsedNotes);
             return parsedNotes;
         } catch (error) {
             parsedNotes = [];

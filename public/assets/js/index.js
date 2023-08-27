@@ -1,5 +1,3 @@
-console.log('Hello from index.js');
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
