@@ -13,7 +13,7 @@ const htmlRoutes = require('./routes/htmlRoutes');
 const app = express(); 
 
 //call this variable to access the port
-const PORT = process.env.port || 5001;  
+const PORT = process.env.PORT || 5001;  
 
 
 //setting up the middleware functionality
